@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-require('dotenv').config()
 
 if(process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
   const webpackMiddleware = require('webpack-dev-middleware');
   const webpack = require('webpack');
   const webpackConfig = require('./webpack.config.js');
